@@ -1,0 +1,19 @@
+{
+  "name": "techcore-test-monorepo",
+  "version": "1.0.0",
+  "description": "test-task",
+  "engines":{
+    "node": "16.x.x",
+    "npm": "8.x.x"
+  },
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "node": "cd node && npm run dev",
+    "dev": "heroku local node -f Procfile.windows"
+  },
+  "author": "decadence127",
+  "bugs": {
+    "url": "https://github.com/decadence127/techcore-test-monorepo/issues"
+  },
+  "homepage": "https://github.com/decadence127/techcore-test-monorepo#readme"
+}
