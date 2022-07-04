@@ -25,5 +25,15 @@ class LocationRepository {
       throw e;
     }
   }
+  async deleteLocation(locationId: string) {
+    try {
+      const result = await Location.findOneAndRemove({ _id: locationId });
+
+      return result;
+    } catch (e) {
+      console.error(e);
+      throw e;
+    }
+  }
 }
 export const locationRepository = new LocationRepository();

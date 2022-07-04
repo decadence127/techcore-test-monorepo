@@ -20,6 +20,14 @@ class LocationService {
       throw e;
     }
   }
+  async deleteLocation(locationId: string) {
+    try {
+      const result = locationRepository.deleteLocation(locationId);
+      return result;
+    } catch (e) {
+      throw e;
+    }
+  }
 }
 
 export const locationService = new LocationService();

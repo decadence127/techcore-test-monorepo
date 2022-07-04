@@ -38,9 +38,20 @@ class LocationController {
       });
       return res.json(result);
     } catch (e) {
-      console.log(e);
-
       res.status(422).json({ msg: "Unprocessed Entity" });
+    }
+  }
+  async deleteLocation(
+    req: express.Request<{ id: string }>,
+    res: express.Response
+  ) {
+    try {
+      const { id } = req.params;
+      const result = await locationService.deleteLocation(id);
+
+      return res.status(200).json(result);
+    } catch (e) {
+      res.status(500).json({ msg: "Internal Error" });
     }
   }
 }
