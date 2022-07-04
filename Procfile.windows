@@ -1,2 +1,0 @@
-node: cd node && SET PORT=9119 npm run dev
-client: cd client && SET PORT=3000 npm start

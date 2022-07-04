@@ -9,7 +9,7 @@
   "scripts": {
     "client": "cd client && npm run dev",
     "node": "cd node && npm run dev",
-    "dev": "heroku local node -f Procfile.windows"
+    "dev": "heroku local -f Procfile.dev"
   },
   "author": "decadence127",
   "bugs": {
