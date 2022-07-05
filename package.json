@@ -9,7 +9,10 @@
   "scripts": {
     "client": "cd client && npm run dev",
     "node": "cd node && npm run dev",
-    "dev": "heroku local -f Procfile"
+    "dev": "heroku local -f Procfile.dev",
+    "build-client": "node client/buildClient.js",
+    "heroku-postbuild": "npm run build-client && npm run deploy",  
+    "deploy": "rm -rf public/* && cp -a client/build/. public/"
   },
   "author": "decadence127",
   "bugs": {
