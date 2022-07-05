@@ -20,6 +20,6 @@ const port = process.env.PORT || 9119;
 (async () => {
   await connectDB();
   app.listen(port, () => {
-    console.info(`Server has been start on port ${port}`);
+    console.info(`Server has been started on port ${port}`);
   });
 })();
