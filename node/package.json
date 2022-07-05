@@ -7,7 +7,10 @@
     "tsc": "tsc ./src/server.ts --outDir dist",
     "node": "npm run dev",
     "prod": "ts-node --log-error ./src/server.ts",
-    "dev": "ts-node-dev --no-notify --respawn --inspect --transpile-only --cache-directory ./cache ./src/server.ts"
+    "dev": "ts-node-dev --no-notify --respawn --inspect --transpile-only --cache-directory ./cache ./src/server.ts",
+    "build-client": "node client/buildClient.js",
+    "heroku-postbuild": "npm run build-client && npm run deploy",  
+    "deploy": "rm -rf public/* && cp -a client/build/. public/"
   },
   "engines": {
     "node": "16.x.x"
