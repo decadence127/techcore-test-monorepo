@@ -6,6 +6,7 @@
   "scripts": {
     "tsc": "tsc ./src/server.ts --outDir dist",
     "node": "npm run dev",
+    "prod": "ts-node --log-error ./src/server.ts",
     "dev": "ts-node-dev --no-notify --respawn --inspect --transpile-only --cache-directory ./cache ./src/server.ts"
   },
   "engines": {
